@@ -19,6 +19,7 @@ export const quotesApiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "https://dummyjson.com/quotes" }),
   reducerPath: "quotesApi",
   // Tag types are used for caching and invalidation.
+  
   tagTypes: ["Quotes"],
   endpoints: build => ({
     // Supply generics for the return type (in this case `QuotesApiResponse`)
