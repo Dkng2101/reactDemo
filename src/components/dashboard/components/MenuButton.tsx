@@ -1,10 +1,14 @@
 import * as React from 'react';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
+import { createTheme, styled, ThemeProvider } from '@mui/material/styles';
+
 
 export interface MenuButtonProps extends IconButtonProps {
   showBadge?: boolean;
 }
+
 
 export default function MenuButton({
   showBadge = false,
@@ -12,12 +16,13 @@ export default function MenuButton({
 }: MenuButtonProps) {
   return (
     <Badge
+
       color="error"
-      variant="dot"
+      badgeContent={1}
       invisible={!showBadge}
-      sx={{ [`& .${badgeClasses.badge}`]: { right: 2, top: 2 } }}
+      sx={{ alignItems: 'center', fontSize: 1}}
     >
-      <IconButton size="small" {...props} />
+      <NotificationsRoundedIcon/>
     </Badge>
   );
 }

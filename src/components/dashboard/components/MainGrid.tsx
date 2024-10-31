@@ -48,47 +48,32 @@ const data: StatCardProps[] = [
 
 export default function MainGrid() {
   return (
-    <Box sx={{ width: "100%", maxWidth: { sm: "100%", md: "1700px" } }}>
+    <Box
+      sx={{
+        backgroundColor: "white",
+        boxShadow: "rgba(0,0,0,0.2) 0 0 7px",
+        borderRadius: 1,
+        width: "1100px",
+        alignSelf: "start",
+        maxWidth: { sm: "100%", md: "1700px" },
+        padding: "15px",
+      }}
+    >
       {/* cards */}
-      <Typography component="h2" variant="h6" sx={{ mb: 1 }}>
+      <Typography variant="h4" sx={{ mb: 1 }}>
         Overview
       </Typography>
       <Divider></Divider>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} sx={{ mt: 2, height: 500 }}>
         <Grid size={5}>
-          <div style={{marginBottom:'2px'}}>ducnd@vietis.com.vn</div>
+          <Typography variant="subtitle2" style={{ color: 'cornflowerblue', marginBottom: "2px" }}>Email</Typography>
           <div>ducnd@vietis.com.vn</div>
         </Grid>
         <Grid size={7}>
-          <div>ducnd@vietis.com.vn</div>
-          <div>ducnd@vietis.com.vn</div>
+        <Typography variant="subtitle2" style={{ color: 'cornflowerblue', marginBottom: "2px" }}>Gender</Typography>
+          <div>Nam</div>
         </Grid>
       </Grid>
-      <Grid
-        container
-        spacing={2}
-        columns={12}
-        sx={{ mb: theme => theme.spacing(2), pt: "20px" }}
-      >
-        {data.map((card, index) => (
-          <Grid key={index} size={{ xs: 12, sm: 6, lg: 3 }}>
-            <StatCard {...card} />
-          </Grid>
-        ))}
-        <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
-          <HighlightedCard />
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <SessionsChart />
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <PageViewsBarChart />
-        </Grid>
-      </Grid>
-      <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
-        Details
-      </Typography>
-      <Copyright sx={{ my: 4 }} />
     </Box>
   )
 }

@@ -1,12 +1,11 @@
 import LogoutIcon from "@mui/icons-material/Logout"
-import { Box } from "@mui/material"
+import { Stack, Typography } from "@mui/material"
 
 export default function LogOut() {
   return (
-    <Box sx={{ display: "flex" }}>
-      <div>
-        <LogoutIcon></LogoutIcon>Logout
-      </div>
-    </Box>
+    <Stack alignItems="center" direction="row" gap={0.2}>
+      <LogoutIcon></LogoutIcon>
+      <Typography>Logout</Typography>
+    </Stack>
   )
 }

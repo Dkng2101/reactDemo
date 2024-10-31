@@ -14,15 +14,15 @@ const xThemeComponents = {
 function Simple(props: { disableCustomTheme?: boolean }) {
   return (
     <AppTheme {...props} themeComponents={xThemeComponents}>
-      <CssBaseline enableColorScheme />
-      <Box sx={{ display: "flex" }}>
+      {/* <CssBaseline enableColorScheme /> */}
+      <Box sx={{ backgroundColor: 'background.paper', display: "flex" }}>
         <SideMenu />
-        <AppNavbar />
+        {/* <AppNavbar /> */}
         <Box
           component="main"
         >
           <Stack
-            spacing={2}
+            spacing={3}
             sx={{
               alignItems: "center",
               mx: 3,
