@@ -1,0 +1,32 @@
+import * as React from "react"
+import FormControl from "@mui/material/FormControl"
+import InputAdornment from "@mui/material/InputAdornment"
+import OutlinedInput from "@mui/material/OutlinedInput"
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded"
+
+export default function Search() {
+  return (
+    <FormControl
+      sx={{
+        ml: "220px",
+        width: { xs: "100%", md: "50ch" },
+      }}
+      variant="outlined"
+    >
+      <OutlinedInput
+        size="small"
+        id="search"
+        placeholder="Search…"
+        sx={{ backgroundColor: "background.paper", flexGrow: 1 }}
+        startAdornment={
+          <InputAdornment position="start" sx={{ color: "text.primary" }}>
+            <SearchRoundedIcon fontSize="small" />
+          </InputAdornment>
+        }
+        inputProps={{
+          "aria-label": "search",
+        }}
+      />
+    </FormControl>
+  )
+}
